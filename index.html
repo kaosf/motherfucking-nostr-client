@@ -98,7 +98,7 @@
       var ts = new Date(nostrEv.created_at * 1000);
       var tsView = document.createElement("time");
       tsView.setAttribute("datetime", ts.toISOString());
-      tsView.textContent = "[" + formatTimestamp(ts) + "]";
+      tsView.textContent = formatTimestamp(ts);
 
       var authorView = document.createElement("b");
       authorView.textContent = nostrEv.pubkey.substring(0, 8);
@@ -126,7 +126,7 @@
       postView.appendChild(tsView);
       postView.appendChild(document.createTextNode(" "));
       postView.appendChild(authorView);
-      postView.appendChild(document.createTextNode(" > "));
+      postView.appendChild(document.createTextNode(" "));
       contentElems.forEach(function(e) {
         postView.appendChild(e);
       });
