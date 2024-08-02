@@ -103,7 +103,7 @@
       var authorView = document.createElement("b");
       authorView.textContent = nostrEv.pubkey.substring(0, 8);
       var authorColor = parseInt(nostrEv.pubkey.substring(0, 2), 16) * 360 / 256;
-      authorView.style.color = "hsl(" + authorColor + ", 90%, 45%)";
+      authorView.style.color = "hsl(" + authorColor + ", 90%, 75%)";
 
       var contentSplitByUrl = nostrEv.content.split(urlPattern);
       var contentElems = contentSplitByUrl
