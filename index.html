@@ -151,7 +151,7 @@
       var ts = new Date(unixtime * 1000);
       var timeElem = document.createElement("time");
       timeElem.setAttribute("datetime", ts.toISOString());
-      timeElem.textContent = "[" + formatTimestamp(ts) + "]";
+      timeElem.textContent = formatTimestamp(ts);
       return timeElem;
     }
 
@@ -171,7 +171,7 @@
       view.appendChild(timestampView(nostrEv.created_at));
       view.appendChild(document.createTextNode(" "));
       view.appendChild(pubkeyView(nostrEv.pubkey));
-      view.appendChild(document.createTextNode(" > "));
+      view.appendChild(document.createTextNode(" "));
       return view;
     }
 
